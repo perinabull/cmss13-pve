@@ -1,4 +1,6 @@
 
+#define PVT_VARIANT "Private"
+#define PFC_VARIANT "Private First Class"
 #define LCPL_VARIANT "Lance Corporal"
 #define CPL_VARIANT "Corporal"
 
@@ -13,7 +15,7 @@
 	gear_preset_secondary = /datum/equipment_preset/uscm/sg/lesser_rank
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You are a specialized automatic rifleman.</a> Your task is to provide heavy weapons support for your squad.<br><b>You remember that you've stored your personal gear and uniform are located in the dorm or locker rooms.</b>"
 
-	job_options = list(CPL_VARIANT = "CPL", LCPL_VARIANT = "LCPL")
+	job_options = list(PVT_VARIANT = "PVT", PFC_VARIANT = "PFC", LCPL_VARIANT = "LCPL", CPL_VARIANT = "CPL")
 
 /datum/job/marine/smartgunner/set_spawn_positions(count)
 	spawn_positions = sg_slot_formula(count)
@@ -94,5 +96,7 @@
 	job = JOB_SQUAD_SMARTGUN_FORECON
 	squad = SQUAD_LRRP
 
+#undef PVT_VARIANT
+#undef PFC_VARIANT
 #undef LCPL_VARIANT
 #undef CPL_VARIANT
